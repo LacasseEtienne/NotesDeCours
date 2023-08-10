@@ -1,0 +1,14 @@
+{
+    "EEI": {
+        "title": "Exploitation d’un environnement informatique",
+        "type": "page"
+    },
+    "Object2": {
+        "title": "Programmation Objet 2",
+        "type": "page"
+    },
+    "Web2": {
+        "title": "Développement WEB 2",
+        "type": "page"
+    }
+}
