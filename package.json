@@ -1,7 +1,7 @@
 {
 	"scripts": {
 		"build": "next build",
-		"deploy": "gh-pages -d out -t true",
+		"deploy_gh_pages": "gh-pages -d out -t true",
 		"dev": "next dev",
 		"export": "next build && touch out/.nojekyll",
 		"lint": "next lint",
