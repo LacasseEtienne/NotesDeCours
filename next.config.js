@@ -3,6 +3,9 @@ const withNextra = require('nextra')({
     themeConfig: './theme.config.tsx',
 })
 
+const isProduction = process.env.NODE_ENV === "production";
+const assetPrefix = isProduction ? "/notes-de-cours" : "./";
+
 const nextConfig = {
     output: 'export',
     images: {
@@ -11,6 +14,8 @@ const nextConfig = {
     skipTrailingSlashRedirect: true, // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
     reactStrictMode: true,
     swcMinify: true,
+    assetPrefix,
+    basePath: assetPrefix,
     // trailingSlash: true, // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
 };
 
