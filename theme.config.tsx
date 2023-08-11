@@ -11,6 +11,10 @@ const config: DocsThemeConfig = {
         content: EmptyComponent,
     },
     useNextSeoProps() {},
+    footer: {
+        text: "",
+    },
+    i18n: [],
 }
 
 export default config

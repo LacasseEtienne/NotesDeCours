@@ -1,13 +1,17 @@
 {
-    "EEI": {
+    "index": {
+        "title": "Notes de cours",
+        "display": "hidden"
+    },
+    "eei": {
         "title": "Exploitation d’un environnement informatique",
         "type": "page"
     },
-    "Object2": {
+    "object2": {
         "title": "Programmation Objet 2",
         "type": "page"
     },
-    "Web2": {
+    "web2": {
         "title": "Développement WEB 2",
         "type": "page"
     }
