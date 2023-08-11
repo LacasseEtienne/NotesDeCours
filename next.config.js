@@ -3,7 +3,7 @@ const withNextra = require('nextra')({
     themeConfig: './theme.config.tsx',
 })
 
-module.exports = withNextra({
+const nextConfig = {
     output: 'export',
     images: {
         unoptimized: true,
@@ -12,4 +12,10 @@ module.exports = withNextra({
     reactStrictMode: true,
     swcMinify: true,
     trailingSlash: true, // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
-})
+};
+
+const config = withNextra({
+    ...nextConfig
+});
+
+module.exports = config;
