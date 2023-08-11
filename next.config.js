@@ -3,7 +3,7 @@ const withNextra = require('nextra')({
     themeConfig: './theme.config.tsx',
 })
 
-const assetPrefix = process.env.GITHUB_REPOSITORY && process.env.GITHUB_REPOSITORY_OWNER ?
+const basePath = process.env.GITHUB_REPOSITORY && process.env.GITHUB_REPOSITORY_OWNER ?
     process.env.GITHUB_REPOSITORY.substring(process.env.GITHUB_REPOSITORY_OWNER.length) :
     "";
 
@@ -15,8 +15,8 @@ const nextConfig = {
     skipTrailingSlashRedirect: true, // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
     reactStrictMode: true,
     swcMinify: true,
-    assetPrefix,
-    basePath: assetPrefix,
+    assetPrefix: basePath,
+    basePath,
     trailingSlash: true, // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
 };
 
