@@ -1,8 +1,11 @@
-const withNextra = require('nextra')({
+import Nextra from 'nextra';
+
+const withNextra = Nextra({
     theme: 'nextra-theme-docs',
     themeConfig: './theme.config.tsx',
 })
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
     images: {
@@ -14,8 +17,6 @@ const nextConfig = {
     trailingSlash: true, // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
 };
 
-const config = withNextra({
+export default withNextra({
     ...nextConfig
 });
-
-module.exports = config;
